@@ -1,0 +1,8 @@
+div#footer {
+  background-color: rgba(8, 82, 8);
+  bottom: 0%;
+  position: fixed;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+}

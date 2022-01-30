@@ -1,0 +1,36 @@
+<div class="container">
+  <label for="prod_id">Product id:</label>
+  <input type="text" id="prod_id" name="prod_id" #prod_id />
+  <label for="prod_name">Product Name </label>
+  <input type="text" id="prod_name" name="prod_name" #prod_name />
+  <input
+    type="button"
+    id="add_prod"
+    value="Add"
+    class="btn btn-primary"
+    (click)="clickHandler(prod_id.value, prod_name.value)"
+  />
+</div>
+
+<h1>Product Items</h1>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Product Name</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of products">
+        <td>{{ prod.id }}</td>
+        <td>{{ prod.name }}</td>
+        <td>
+          <sw-raiting class="rating" [rating]="prod.rating"></sw-raiting>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- {{ prod.id }} -- {{ prod.name }} <sw-raiting></sw-raiting> -->
+</div>

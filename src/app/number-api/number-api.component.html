@@ -1,0 +1,14 @@
+<div class="container shadow-lg p-3 mb-5 bg-white rounded">
+  <label for="">Enter a Number: </label>
+  <input type="number" name="" id="" #number />
+  <button class="btn btn-primary" (click)="clickHandler(number.value)">
+    get
+  </button>
+</div>
+<div class="container-box" [hidden]="hidden1">
+  <ul class="list-group" *ngFor="let items of textItems.reverse()">
+    <li class="list-group-item list-group-item-primary list-item">
+      {{ items.text }} @{{ items.date }}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,33 @@
+<div>
+  <button (click)="display()">Display</button>
+  <div [hidden]="hiddenElement">
+    <!-- {{ students[i].fullName }} -->
+    <table>
+      <tr>
+        <th>Full Name</th>
+        <th>Cgpa</th>
+        <th>date of joining</th>
+      </tr>
+      <tr
+        *ngFor="let item of students"
+        [style.background-color]="item.cgpa | display"
+      >
+        <td>
+          {{ item.fullName }}
+        </td>
+        <td>
+          {{ item.cgpa }}
+        </td>
+        <td>
+          {{ item.doj }}
+        </td>
+      </tr>
+    </table>
+
+    <!-- <ul *ngFor="let item of students">
+      <li class="{{ item.color }}">
+        {{ item | display }}
+      </li> -->
+    <!-- </ul> -->
+  </div>
+</div>

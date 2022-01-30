@@ -1,0 +1,19 @@
+<div class="main-container">
+  <button (click)="clearHandler(zoomBox, image)">Clear Selected</button>
+  <div class="container">
+    <div class="row">
+      <div class="col" *ngFor="let img of random_image">
+        <img
+          src="{{ img }}"
+          alt="image"
+          class="img"
+          (click)="clickHandler($event, zoomBox, image)"
+        />
+      </div>
+    </div>
+  </div>
+  <div [hidden]="hidden" #zoomBox value="">
+    <h1 [hidden]="hiddenH1" class="heading">No image selected</h1>
+    <img src="{{ imgSrc }}" alt="" #image class="show-img" [hidden]="hideImg" />
+  </div>
+</div>

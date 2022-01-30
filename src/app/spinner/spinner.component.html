@@ -1,0 +1,9 @@
+<p [innerText]="'Displaying an Image !!'"></p>
+
+<div>
+  <input type="button" value="btnText" (click)="handleToggle($event)" />
+</div>
+
+<div>
+  <img [hidden]="hideImage" [src]="imageUrl" />
+</div>

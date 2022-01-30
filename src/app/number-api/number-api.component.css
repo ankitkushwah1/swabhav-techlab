@@ -1,0 +1,19 @@
+.container {
+  margin: 100px auto;
+
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  gap: 14px;
+}
+.list-item {
+  display: block;
+}
+.container-box {
+  margin: 100px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
